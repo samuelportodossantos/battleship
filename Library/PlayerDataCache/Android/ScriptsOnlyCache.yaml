@@ -5,6 +5,8 @@ ScriptsOnlyBuild:
     - Explosion
     - FixedJoystick
     - GameOver
+    - Menu
+    - Pause
     - StarControll
     - balaControl
     - enemyControl
@@ -23,10 +25,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -87,23 +87,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12570}
+      Script: {instanceID: 12278}
     - Class: 114
-      Script: {instanceID: 13324}
+      Script: {instanceID: 12572}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 13326}
     - Class: 114
-      Script: {instanceID: 13652}
+      Script: {instanceID: 13512}
     - Class: 114
-      Script: {instanceID: 14088}
+      Script: {instanceID: 13654}
     - Class: 114
-      Script: {instanceID: 14198}
+      Script: {instanceID: 14090}
     - Class: 114
-      Script: {instanceID: 14206}
+      Script: {instanceID: 14200}
     - Class: 114
-      Script: {instanceID: 14270}
+      Script: {instanceID: 14208}
     - Class: 114
-      Script: {instanceID: 23250}
+      Script: {instanceID: 14272}
+    - Class: 114
+      Script: {instanceID: 15878}
+    - Class: 114
+      Script: {instanceID: 20592}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,7 +219,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 7b3d49a8679427c5a965005690288fb1
+      Hash: 5631245fa6a38973e937804cda20fb4e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: shipContol
@@ -375,6 +379,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 20c9a74d659b6895cfdb5f4624ba8daa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Explosion
   - hash:
       serializedVersion: 2
       Hash: ce669872a2be11bc686ea22961d8a3bb
@@ -689,10 +699,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 20c9a74d659b6895cfdb5f4624ba8daa
+      Hash: 99604d1a591f0e881c33387d81f4871a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Explosion
+    className: Pause
+  - hash:
+      serializedVersion: 2
+      Hash: b3b0d7efde13db38817e7614e453db43
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   platform: 13
   scenePathNames:
   - Assets/game.unity

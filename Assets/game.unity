@@ -374,6 +374,8 @@ GameObject:
   - component: {fileID: 160753313}
   - component: {fileID: 160753315}
   - component: {fileID: 160753314}
+  - component: {fileID: 160753317}
+  - component: {fileID: 160753316}
   m_Layer: 5
   m_Name: resetScoreBtn
   m_TagString: Untagged
@@ -437,6 +439,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160753312}
   m_CullTransparentMesh: 0
+--- !u!114 &160753316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160753312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 160753317}
+          m_MethodName: resetBestScore
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &160753317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160753312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94bf89282291af4f9b3773075d2d4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1681458550}
+  bestScoreText: {fileID: 825207099}
 --- !u!1 &170251139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1119,8 @@ GameObject:
   - component: {fileID: 489548912}
   - component: {fileID: 489548914}
   - component: {fileID: 489548913}
+  - component: {fileID: 489548915}
+  - component: {fileID: 489548916}
   m_Layer: 5
   m_Name: resumeGameBtn
   m_TagString: Untagged
@@ -1138,6 +1184,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489548911}
   m_CullTransparentMesh: 0
+--- !u!114 &489548915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489548911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94bf89282291af4f9b3773075d2d4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1681458550}
+  bestScoreText: {fileID: 0}
+--- !u!114 &489548916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489548911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 489548915}
+          m_MethodName: close
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &497961768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +1819,8 @@ GameObject:
   - component: {fileID: 926786109}
   - component: {fileID: 926786111}
   - component: {fileID: 926786110}
+  - component: {fileID: 926786113}
+  - component: {fileID: 926786112}
   m_Layer: 5
   m_Name: resetGameBtn
   m_TagString: Untagged
@@ -1794,6 +1884,48 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926786108}
   m_CullTransparentMesh: 0
+--- !u!114 &926786112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926786108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 926786113}
+          m_MethodName: resetGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &926786113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926786108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94bf89282291af4f9b3773075d2d4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1681458550}
+  bestScoreText: {fileID: 0}
 --- !u!1 &948431548
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,6 +3188,7 @@ GameObject:
   - component: {fileID: 1880739969}
   - component: {fileID: 1880739968}
   - component: {fileID: 1880739967}
+  - component: {fileID: 1880739970}
   m_Layer: 5
   m_Name: menu
   m_TagString: Untagged
@@ -3099,8 +3232,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: setPause
+        - m_Target: {fileID: 1880739970}
+          m_MethodName: open
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3150,6 +3283,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880739965}
   m_CullTransparentMesh: 0
+--- !u!114 &1880739970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880739965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94bf89282291af4f9b3773075d2d4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1681458550}
+  bestScoreText: {fileID: 0}
 --- !u!1 &1910976947
 GameObject:
   m_ObjectHideFlags: 0

@@ -75,10 +75,10 @@
     <Compile Include="Assets\Scripts\ButtonFire.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Sprites\Menu.cs" />
     <Compile Include="Assets\Sprites\Pause.cs" />
     <Compile Include="Assets\Sprites\background\starControl.cs" />
     <Compile Include="Assets\Sprites\enemy\enemyControl.cs" />
-    <Compile Include="Assets\Sprites\menu.cs" />
     <Compile Include="Assets\Sprites\ship\balaControl.cs" />
     <Compile Include="Assets\Sprites\ship\shipContol.cs" />
     <Reference Include="Unity.Timeline.Editor">
