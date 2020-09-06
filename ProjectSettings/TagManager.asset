@@ -11,6 +11,8 @@ TagManager:
   - star
   - Score
   - GameOver
+  - TiroDuplo
+  - TiroQuadruplo
   layers:
   - Default
   - TransparentFX

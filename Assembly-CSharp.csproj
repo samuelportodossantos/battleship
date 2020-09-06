@@ -75,6 +75,10 @@
     <Compile Include="Assets\Scripts\ButtonFire.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\KeyboardController.cs" />
+    <Compile Include="Assets\Scripts\RotateObject.cs" />
+    <Compile Include="Assets\Scripts\TiroItem.cs" />
+    <Compile Include="Assets\Scripts\decreaseTime.cs" />
     <Compile Include="Assets\Sprites\Menu.cs" />
     <Compile Include="Assets\Sprites\Pause.cs" />
     <Compile Include="Assets\Sprites\background\starControl.cs" />

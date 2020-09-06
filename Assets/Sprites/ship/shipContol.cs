@@ -2,9 +2,11 @@
 
 public class shipContol : MonoBehaviour
 {
-    public float shipSpeed = 0.001f;
+    public float shipSpeed = 15;
     private bool releasedControls = true;
     public bool doubleShot = false;
+    public bool quadShot = false;
+
     public GameObject explosion;
     public GameObject gameOver;
     Joystick Joy;
@@ -16,11 +18,14 @@ public class shipContol : MonoBehaviour
     public AudioSource bgSong;
     public GameObject menu;
     public GameObject pause;
+    public AudioSource gameOverVoice;
+    public AudioSource getBonusVoice;
+    public GameObject bonusTimerController;
+    public GameObject starControl;
 
     // Start is called before the first frame update
     void Start()
     {
-        //this.doubleShot = true;
         Joy = FindObjectOfType<Joystick>();
     }
 
@@ -42,6 +47,15 @@ public class shipContol : MonoBehaviour
         if (this.releasedControls)
         {
 
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                fireing = true;
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                fireing = false;
+            }
+
             gameObject.GetComponent<Transform>().localPosition += new Vector3((Joy.Horizontal * this.shipSpeed) * Time.deltaTime, (Joy.Vertical * this.shipSpeed) * Time.deltaTime, 0);
 
             if ( this.fireing ) {
@@ -53,7 +67,16 @@ public class shipContol : MonoBehaviour
                         Instantiate(bala, new Vector3((transform.position.x - 0.3f), (transform.position.y + 1f), transform.position.z), Quaternion.identity);
                         Instantiate(bala, new Vector3((transform.position.x - -0.3f), (transform.position.y + 1f), transform.position.z), Quaternion.identity);
                         
-                    } else {
+                    } else if(this.quadShot) {
+
+                        Instantiate(bala, new Vector3((transform.position.x - 0.3f), (transform.position.y + 1f), transform.position.z), Quaternion.identity);
+                        Instantiate(bala, new Vector3((transform.position.x - -0.3f), (transform.position.y + 1f), transform.position.z), Quaternion.identity);
+
+                        Instantiate(bala, new Vector3((transform.position.x - 0.9f), (transform.position.y + 1f), transform.position.z), Quaternion.identity);
+                        Instantiate(bala, new Vector3((transform.position.x - -0.9f), (transform.position.y + 1f), transform.position.z), Quaternion.identity);
+
+                    } else
+                    {
                         Instantiate(bala, new Vector3(transform.position.x, (transform.position.y + 1f), transform.position.z), Quaternion.identity);
                     }
                     
@@ -75,9 +98,35 @@ public class shipContol : MonoBehaviour
             gameOver.SetActive(true);
             bgSong.Stop();
             gameOverSong.Play();
+            gameOverVoice.Play();
             pause.SetActive(false);
             menu.SetActive(false);
 
         }
+
+        if (collision.gameObject.tag == "TiroDuplo")
+        {
+            this.doubleShot = true;
+            this.quadShot = false;
+            getBonusVoice.Play();
+            Destroy(collision.gameObject);
+            initBonusTimer();
+        }
+
+        if (collision.gameObject.tag == "TiroQuadruplo")
+        {
+            this.doubleShot = false;
+            this.quadShot = true;
+            getBonusVoice.Play();
+            Destroy(collision.gameObject);
+            initBonusTimer();
+        }
+    }
+
+    void initBonusTimer()
+    {
+        bonusTimerController.GetComponent<decreaseTime>().resetCurrentTime();
+        bonusTimerController.SetActive(true);
     }
 }
+

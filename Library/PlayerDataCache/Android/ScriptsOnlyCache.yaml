@@ -5,10 +5,14 @@ ScriptsOnlyBuild:
     - Explosion
     - FixedJoystick
     - GameOver
+    - KeyboardController
     - Menu
     - Pause
+    - RotateObject
     - StarControll
+    - TiroItem
     - balaControl
+    - decreaseTime
     - enemyControl
     - shipContol
     - starControl
@@ -27,7 +31,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -73,41 +76,49 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11458}
+      Script: {instanceID: 11460}
     - Class: 114
-      Script: {instanceID: 11512}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11552}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 11694}
+      Script: {instanceID: 11680}
     - Class: 114
-      Script: {instanceID: 11696}
+      Script: {instanceID: 11698}
     - Class: 114
-      Script: {instanceID: 12182}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 12572}
+      Script: {instanceID: 12256}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 12284}
     - Class: 114
-      Script: {instanceID: 13512}
+      Script: {instanceID: 12578}
     - Class: 114
-      Script: {instanceID: 13654}
+      Script: {instanceID: 12580}
     - Class: 114
-      Script: {instanceID: 14090}
+      Script: {instanceID: 13334}
     - Class: 114
-      Script: {instanceID: 14200}
+      Script: {instanceID: 13520}
     - Class: 114
-      Script: {instanceID: 14208}
+      Script: {instanceID: 13662}
     - Class: 114
-      Script: {instanceID: 14272}
+      Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 15878}
+      Script: {instanceID: 13836}
     - Class: 114
-      Script: {instanceID: 20592}
+      Script: {instanceID: 14102}
+    - Class: 114
+      Script: {instanceID: 14212}
+    - Class: 114
+      Script: {instanceID: 14220}
+    - Class: 114
+      Script: {instanceID: 14284}
+    - Class: 114
+      Script: {instanceID: 24224}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,7 +230,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 5631245fa6a38973e937804cda20fb4e
+      Hash: 9f14ec04f2e97eae3609fdec5203cd0b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: shipContol
@@ -235,6 +246,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: b3b0d7efde13db38817e7614e453db43
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -255,7 +272,7 @@ ScriptsOnlyBuild:
     className: starControl
   - hash:
       serializedVersion: 2
-      Hash: c29bc92e6e996a4c8c8dbda0c49594b5
+      Hash: 50596a76df284fb855d6168f931d910f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StarControll
@@ -369,6 +386,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 99604d1a591f0e881c33387d81f4871a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pause
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -403,6 +426,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 5bddb32bcb848f51c6efb9a0b86ba855
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RotateObject
   - hash:
       serializedVersion: 2
       Hash: a1e1c7b2b5f485c6ad5da1d4fd133e92
@@ -567,10 +596,22 @@ ScriptsOnlyBuild:
     className: JoystickPlayerExample
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TiroItem
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 95b5bb539619f71d154377ac09bff83a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: decreaseTime
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -585,7 +626,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e0f0ef537d59ab9b6f18aef53ecd9f89
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOver
@@ -699,16 +740,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 99604d1a591f0e881c33387d81f4871a
+      Hash: d03907daa33e57019f3a73b864998090
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Pause
-  - hash:
-      serializedVersion: 2
-      Hash: b3b0d7efde13db38817e7614e453db43
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Menu
+    className: KeyboardController
   platform: 13
   scenePathNames:
   - Assets/game.unity
