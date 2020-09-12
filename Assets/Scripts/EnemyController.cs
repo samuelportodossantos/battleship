@@ -5,12 +5,18 @@ public class EnemyController : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject player;
+
+    public GameObject boss;
     public Text txt;
     public Text BestScore;
 
     private double amountOfEnemies = 2;
     public int defeatedEnemies = 0;
     public int scoreFactor = 200;
+
+    public int enemiesDestroyed = 0;
+
+    public bool canRenderEnemies = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +31,25 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
 
-        if ( GameObject.FindGameObjectsWithTag("Inimigo").Length <= 0)
+        if ( GameObject.FindGameObjectsWithTag("Inimigo").Length <= 0 && canRenderEnemies == true)
         {
-           
             this.renderEnemies();
-            //this.player.GetComponent<shipContol>().doubleShot = true;
         }
+
+        if ( this.enemiesDestroyed >= 20 ) {
+            this.enemiesDestroyed = 0;
+            if (this.scoreFactor < 200) {
+                this.scoreFactor += 50;
+            }
+        }
+
+
+        if (defeatedEnemies > 30000 ) {
+            if (boss != null) {
+                boss.SetActive(true);
+            }
+        }
+
         
     }
 

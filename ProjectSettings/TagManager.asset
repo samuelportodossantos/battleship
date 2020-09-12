@@ -13,6 +13,8 @@ TagManager:
   - GameOver
   - TiroDuplo
   - TiroQuadruplo
+  - BoomAudio
+  - BalaInimigo
   layers:
   - Default
   - TransparentFX

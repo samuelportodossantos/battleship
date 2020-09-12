@@ -1,15 +1,19 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Boss01Controller
+    - BossBala
     - EnemyController
     - Explosion
     - FixedJoystick
     - GameOver
     - KeyboardController
+    - MainMenu
     - Menu
-    - Pause
+    - MenuPlayerAnim
     - RotateObject
     - StarControll
+    - StartGame
     - TiroItem
     - balaControl
     - decreaseTime
@@ -29,8 +33,11 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -44,6 +51,69 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11174}
+    - Class: 114
+      Script: {instanceID: 11460}
+    - Class: 114
+      Script: {instanceID: 12188}
+    - Class: 114
+      Script: {instanceID: 13666}
+    - Class: 114
+      Script: {instanceID: 14218}
+    - Class: 114
+      Script: {instanceID: 14290}
+    - Class: 114
+      Script: {instanceID: 19676}
+    - Class: 114
+      Script: {instanceID: 20626}
+    - Class: 114
+      Script: {instanceID: 21524}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/game.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -59,7 +129,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
     - Class: 61
+      Script: {instanceID: 0}
+    - Class: 70
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -84,41 +158,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 11666}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 11682}
     - Class: 114
       Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 12186}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 12256}
+      Script: {instanceID: 12188}
     - Class: 114
-      Script: {instanceID: 12284}
-    - Class: 114
-      Script: {instanceID: 12578}
+      Script: {instanceID: 12286}
     - Class: 114
       Script: {instanceID: 12580}
     - Class: 114
-      Script: {instanceID: 13334}
+      Script: {instanceID: 12582}
     - Class: 114
-      Script: {instanceID: 13520}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13482}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 13524}
     - Class: 114
-      Script: {instanceID: 13836}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 14102}
+      Script: {instanceID: 13674}
     - Class: 114
-      Script: {instanceID: 14212}
+      Script: {instanceID: 13840}
     - Class: 114
-      Script: {instanceID: 14220}
+      Script: {instanceID: 14086}
     - Class: 114
-      Script: {instanceID: 14284}
+      Script: {instanceID: 14108}
     - Class: 114
-      Script: {instanceID: 24224}
+      Script: {instanceID: 14218}
+    - Class: 114
+      Script: {instanceID: 14226}
+    - Class: 114
+      Script: {instanceID: 14290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -230,7 +306,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 9f14ec04f2e97eae3609fdec5203cd0b
+      Hash: 79e60999d21c6fb764b31c632aa29a27
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: shipContol
@@ -246,6 +322,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 813d5aab5f88edc5d439ca85057b1d33
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss01Controller
   - hash:
       serializedVersion: 2
       Hash: b3b0d7efde13db38817e7614e453db43
@@ -566,7 +648,13 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: b1aff011aed407e6f88c5852685f40b8
+      Hash: a6df1fb7f50f9bf74f59241fcf348c44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossBala
+  - hash:
+      serializedVersion: 2
+      Hash: 719f3da4b2539544b23e4963c221c7d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyController
@@ -624,6 +712,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: d03907daa33e57019f3a73b864998090
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KeyboardController
   - hash:
       serializedVersion: 2
       Hash: e0f0ef537d59ab9b6f18aef53ecd9f89
@@ -740,11 +834,24 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: d03907daa33e57019f3a73b864998090
+      Hash: 524d4f51e552eb64302ffcb8b94371a1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: KeyboardController
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartGame
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuPlayerAnim
   platform: 13
   scenePathNames:
+  - Assets/MainMenu.unity
   - Assets/game.unity
-  playerPath: "C:/Users/Samuel Porto/OneDrive/\xC1rea de Trabalho/battleship.apk"
+  playerPath: "C:/Users/Samuel Porto/OneDrive/\xC1rea de Trabalho/battleship_0.0.82-alpha.apk"

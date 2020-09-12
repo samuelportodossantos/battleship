@@ -24,7 +24,6 @@ public class Menu : MonoBehaviour
     {
         if ( PlayerPrefs.HasKey("score"))
         {
-            print("resetando best score!");
             PlayerPrefs.SetInt("score", 0);
             bestScoreText.text = "BEST SCORE: 0";
         }
@@ -34,6 +33,17 @@ public class Menu : MonoBehaviour
     {
         this.close();
         SceneManager.LoadScene("game");
+    }
+
+    public void returnToMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void exitGame()
+    {
+        Application.Quit();
     }
 
 }

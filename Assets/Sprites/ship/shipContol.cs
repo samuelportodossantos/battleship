@@ -3,7 +3,7 @@
 public class shipContol : MonoBehaviour
 {
     public float shipSpeed = 15;
-    private bool releasedControls = true;
+    public bool releasedControls = true;
     public bool doubleShot = false;
     public bool quadShot = false;
 
@@ -17,11 +17,12 @@ public class shipContol : MonoBehaviour
     public AudioSource gameOverSong;
     public AudioSource bgSong;
     public GameObject menu;
-    public GameObject pause;
     public AudioSource gameOverVoice;
     public AudioSource getBonusVoice;
     public GameObject bonusTimerController;
     public GameObject starControl;
+
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,12 @@ public class shipContol : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 fireing = false;
+            }
+
+            if (Joy.Direction.y < 0) {
+                animator.SetBool("moving_up", false);
+            } else {
+                animator.SetBool("moving_up", true);
             }
 
             gameObject.GetComponent<Transform>().localPosition += new Vector3((Joy.Horizontal * this.shipSpeed) * Time.deltaTime, (Joy.Vertical * this.shipSpeed) * Time.deltaTime, 0);
@@ -89,7 +96,7 @@ public class shipContol : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Inimigo")
+        if (collision.gameObject.tag == "Inimigo" || collision.gameObject.tag == "BalaInimigo")
         {
 
             Instantiate(explosion, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
@@ -99,7 +106,6 @@ public class shipContol : MonoBehaviour
             bgSong.Stop();
             gameOverSong.Play();
             gameOverVoice.Play();
-            pause.SetActive(false);
             menu.SetActive(false);
 
         }

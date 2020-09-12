@@ -80,6 +80,5 @@ public class StarControll : MonoBehaviour
     private void generateBonusRenderTime()
     {
         bonusRenderTime = currentTime + (int)Math.Round(generateRandom(30f, 60f));
-        print("Próximo bonus em " + bonusRenderTime + " segundos");
     }
 }

@@ -28,6 +28,8 @@ public class enemyControl : MonoBehaviour
             {
                 this.enemyController.scoreFactor -= 50;
             }
+            
+            this.enemyController.enemiesDestroyed = 0;
             Destroy(enemy);
         }
     }
@@ -44,9 +46,11 @@ public class enemyControl : MonoBehaviour
                 Destroy(bala);
             }
 
-
             this.enemyExplosion.Play();
-            
+
+            if ( this.enemyController.enemiesDestroyed < 20 ) {
+                this.enemyController.enemiesDestroyed++;
+            }
 
             Text scoreText = this.enemyController.txt;
             this.enemyController.defeatedEnemies += enemyController.scoreFactor;
